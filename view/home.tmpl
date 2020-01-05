@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'parts/head.tmpl' %}
+	<body>
+		{% include 'parts/navbar_mobile.tmpl' %}
+		{% include 'parts/main/promo.tmpl' %}
+		<div class="uk-container">
+			<br/>
+			<h3 id="introduction">Blank Template</h3>
+			<p>Template for quickly building your web application in UIkit and PHP 7.<br/>This is an example of building an application using the MVC (Model-View-Controller) template when the layout, views (templates) and code are separated in a rather convenient way.</p>
+			
+			<h3 id="installation">Installation</h3>
+			<p>
+				<span class="github-btn">
+					<a class="github-button" href="https://github.com/Sagleft/PHP-blank-MVC/fork" data-icon="octicon-repo-forked" aria-label="Fork Sagleft/PHP-blank-MVC on GitHub">Fork</a>
+				</span>
+				<span>it on Github or</span>
+				<span class="github-btn">
+					<a class="github-button" href="https://github.com/Sagleft/PHP-blank-MVC/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Sagleft/PHP-blank-MVC on GitHub">Download</a>
+				</span>
+				<span>this repository.</span>
+			</p>
+			<p>
+				<span>An example for a project called project:</span>
+				<pre>
+					<code>
+git clone https://github.com/Sagleft/PHP-blank-MVC.git project
+cd project
+mkdir view/cache
+chmod 777 view/cache
+cp .env.example .env
+cp composer.json.example composer.json
+composer update
+cd controller/public_html
+cp example.htaccess .htaccess
+					</code>
+				</pre>
+			</p>
+			
+			<h3 id="author">Author</h3>
+			<p>My name is Sagleft. You can see my other repositories <a href="https://github.com/Sagleft" target="_blank">on github</a>.<br/>
+				<span>If you liked my project, rate it:</span>
+				<span class="github-btn">
+					<a class="github-button" href="https://github.com/Sagleft/PHP-blank-MVC" data-icon="octicon-star" aria-label="Star Sagleft/PHP-blank-MVC on GitHub">Star</a>
+				<span>
+			</p>
+		</div>
+		<hr class="uk-divider-icon"/>
+		
+		{% include 'parts/footer.tmpl' %}
+	</body>
+</html>

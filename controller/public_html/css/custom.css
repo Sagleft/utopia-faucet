@@ -1,0 +1,9 @@
+.github-btn {
+	position: relative;
+	top: 5px;
+	left: 1px;
+}
+
+.link-simple, .link-simple:hover {
+	text-decoration: none;
+}
