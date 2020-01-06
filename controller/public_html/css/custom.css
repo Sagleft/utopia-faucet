@@ -7,3 +7,18 @@
 .link-simple, .link-simple:hover {
 	text-decoration: none;
 }
+
+.text-center {
+	text-align: center;
+}
+
+.btn-element {
+	background-color: #eaeaea;
+	color: black!important;
+	margin-bottom: 5px;
+	width: 100px;
+}
+
+.btn-element:hover {
+	background-color: #aeffae;
+}

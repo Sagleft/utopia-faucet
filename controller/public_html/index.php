@@ -6,7 +6,10 @@
 	
 	$handler->render([
 		'tag'   => 'home',
-		'title' => 'Blank project',
-		'user'  => $handler->user->data
+		'title' => 'Claim Cryptons',
+		'user'  => $handler->user->data,
+		'vouchers' => [
+			'available' => $handler->logic->getFreshVouchersCount()
+		]
 	]);
 	

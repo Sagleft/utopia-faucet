@@ -1,10 +1,14 @@
-# composer плюшки
+# composer
 /composer.json
 /controller/vendor/**
-# кеш шаблонов
+# template cache
 /view/cache/**
-# параметры
+# params
 .env
 .htaccess
-# бекапы
+# backup
 *.bak
+# external resources
+/resources/**
+/controller/public_html/css/external
+/controller/public_html/js/external

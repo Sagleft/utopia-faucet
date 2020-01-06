@@ -2,49 +2,44 @@
 <html lang="ru">
 	{% include 'parts/head.tmpl' %}
 	<body>
-		{% include 'parts/navbar_mobile.tmpl' %}
+		{% include 'parts/navbar.tmpl' %}
 		{% include 'parts/main/promo.tmpl' %}
-		<div class="uk-container">
-			<br/>
-			<h3 id="introduction">Blank Template</h3>
-			<p>Template for quickly building your web application in UIkit and PHP 7.<br/>This is an example of building an application using the MVC (Model-View-Controller) template when the layout, views (templates) and code are separated in a rather convenient way.</p>
-			
-			<h3 id="installation">Installation</h3>
-			<p>
-				<span class="github-btn">
-					<a class="github-button" href="https://github.com/Sagleft/PHP-blank-MVC/fork" data-icon="octicon-repo-forked" aria-label="Fork Sagleft/PHP-blank-MVC on GitHub">Fork</a>
-				</span>
-				<span>it on Github or</span>
-				<span class="github-btn">
-					<a class="github-button" href="https://github.com/Sagleft/PHP-blank-MVC/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Sagleft/PHP-blank-MVC on GitHub">Download</a>
-				</span>
-				<span>this repository.</span>
-			</p>
-			<p>
-				<span>An example for a project called project:</span>
-				<pre>
-					<code>
-git clone https://github.com/Sagleft/PHP-blank-MVC.git project
-cd project
-mkdir view/cache
-chmod 777 view/cache
-cp .env.example .env
-cp composer.json.example composer.json
-composer update
-cd controller/public_html
-cp example.htaccess .htaccess
-					</code>
-				</pre>
-			</p>
-			
-			<h3 id="author">Author</h3>
-			<p>My name is Sagleft. You can see my other repositories <a href="https://github.com/Sagleft" target="_blank">on github</a>.<br/>
-				<span>If you liked my project, rate it:</span>
-				<span class="github-btn">
-					<a class="github-button" href="https://github.com/Sagleft/PHP-blank-MVC" data-icon="octicon-star" aria-label="Star Sagleft/PHP-blank-MVC on GitHub">Star</a>
-				<span>
-			</p>
+		<div class="uk-height-large uk-background-cover uk-light uk-flex" id="section-utopia" uk-parallax="bgy: -200" style="background-image: url('/img/dark.jpg');">
+			<div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+				<div class="uk-container">
+					<h1 uk-parallax>Utopia Ecosystem</h1>
+					<p uk-parallax>Utopia is your all-in-one kit for secure instant messaging, encrypted e-mail communication, anonymous payments and private web browsing</p>
+					<p>Utopia is freedom, anonymity, and censorship-free driven product designed for secure communication, anonymous payments and truly free Internet without borders. Total surveillance, information flow control, and official deceptions are exactly what Utopia is intended to prevent. User physical location cannot be revealed. Communication and data cannot be intercepted and read by a 3rd party. All account data is stored on Utopia user's local device in an encrypted file.</p>
+					<p>
+						<a class="uk-button uk-button-default" href="https://u.is" target="_blank" rel="nofollow">Learn more</a>
+					</p>
+				</div>
+			</div>
 		</div>
+		
+		<div class="uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" id="section-projects" style="background-color: #2f2f2f;">
+			<div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+				<div class="uk-container">
+					<h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Related projects</h1>
+					<p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Community projects that may interest you.<br/>Other resources you can find inside Utopia</p>
+					{% include 'parts/main/projects.tmpl' %}
+					<p>You can also visit our <a href="https://mfc.click/utopia_community_tech" target="_blank" rel="nofollow">community development tech channel</a>.</p>
+				</div><br/>
+			</div>
+		</div>
+		
+		<div class="uk-container uk-align-center text-center" id="section-contact">
+			<br/>
+			<h3 id="author">Author</h3>
+			<p>My name is Sagleft. I create projects for Utopia.<br/>You can see my other repositories <a href="https://github.com/Sagleft" target="_blank">on github</a>.<br/>
+				<span>If you liked my project, rate it:</span>
+				<a href="https://github.com/Sagleft/utopia-faucet">
+					<img src="/img/github_star.png"/>
+				</a>
+			</p>
+			<p>Our Russian-language chat on the Utopia network:<br/>D7F238C7CEFDA237D14E6B67CF6511F5</p><br/>
+		</div>
+		
 		<hr class="uk-divider-icon"/>
 		
 		{% include 'parts/footer.tmpl' %}
