@@ -12,3 +12,5 @@
 /resources/**
 /controller/public_html/css/external
 /controller/public_html/js/external
+# other
+/logs/**
