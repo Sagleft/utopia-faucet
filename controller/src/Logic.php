@@ -55,7 +55,7 @@
 		}
 		
 		function checkUserCanGetBonus($by_UA = '', $by_IP = ''): bool {
-			$sql_query = "SELECT id FROM vouchers WHERE by_IP='" . $by_IP . "' AND by_UA='" . $by_UA . "' AND used_date >= CURDATE()";
+			$sql_query = "SELECT id FROM vouchers WHERE by_IP='" . $by_IP . "' OR by_UA='" . $by_UA . "' AND used_date >= CURDATE()";
 			return $this->db->checkRowExists($sql_query);
 		}
 		
