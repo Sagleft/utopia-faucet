@@ -33,3 +33,9 @@ sh get_depends.sh
 ## Copyright
 
 Copyright (c) 2020 Sagleft.
+
+---
+
+![image](https://github.com/Sagleft/Sagleft/raw/master/image.png)
+
+### :globe_with_meridians: [Telegram канал](https://t.me/+VIvd8j6xvm9iMzhi)
