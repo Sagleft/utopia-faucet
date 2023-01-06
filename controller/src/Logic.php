@@ -69,11 +69,16 @@
 			
 			$sql_query = "SELECT id,code FROM vouchers WHERE used='0'";
 			$result = $this->db->query2arr($sql_query);
+
+			if(\count($result) == 0) {
+				$this->last_error = 'The vouchers have run out. Come back later';
+				return '';
+			}
+
 			$voucher_id   = $result['id'];
 			$voucher_code = $result['code'];
 			
 			$sql_query = "UPDATE vouchers SET used='1', by_IP='" . $by_IP . "', by_UA='" . $by_UA . "' WHERE id=" . $voucher_id;
-			//exit($sql_query);
 			if(! $this->db->tryQuery($sql_query)) {
 				$this->last_error = 'Failed to get voucher code, try again later';
 				return '';
@@ -91,4 +96,3 @@
 			return $result['vouchersCount'];
 		}
 	}
-	
