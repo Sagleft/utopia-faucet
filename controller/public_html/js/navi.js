@@ -7,6 +7,10 @@ function IsJsonString(str) {
 	return true;
 }
 
+$( document ).ready(function() {
+    new ClipboardJS('.btn');
+});
+
 $("#claimBonusBtn").click(function() {
 	$.post("/func/claim", {}, function (data) {
 		if(IsJsonString(data)) {
@@ -14,8 +18,11 @@ $("#claimBonusBtn").click(function() {
 			if(parsed_data.status == 'error') {
 				alert(parsed_data.error);
 			} else {
-				$("#voucherCode").html(parsed_data.data.code);
-				UIkit.modal('#voucherBonusModal').show();
+				initConfetti();
+				render();
+				$("#voucherCode").val(parsed_data.data.code);
+				$("#requestVoucher").hide();
+				$("#voucherResultWrap").show();
 			}
 		} else {
 			alert(data);

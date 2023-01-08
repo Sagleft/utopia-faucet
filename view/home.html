@@ -2,45 +2,46 @@
 <html lang="ru">
 	{% include 'parts/head.html' %}
 	<body>
-		{% include 'parts/main/promo.html' %}
-		<div class="uk-height-large uk-background-cover uk-light uk-flex" id="section-utopia" uk-parallax="bgy: -200" style="background-image: url('/img/dark.jpg');">
-			<div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-				<div class="uk-container">
-					<h1 uk-parallax>Utopia Ecosystem</h1>
-					<p uk-parallax>Utopia is your all-in-one kit for secure instant messaging, encrypted e-mail communication, anonymous payments and private web browsing</p>
-					<p>Utopia is freedom, anonymity, and censorship-free driven product designed for secure communication, anonymous payments and truly free Internet without borders. Total surveillance, information flow control, and official deceptions are exactly what Utopia is intended to prevent. User physical location cannot be revealed. Communication and data cannot be intercepted and read by a 3rd party. All account data is stored on Utopia user's local device in an encrypted file.</p>
-					<p>
-						<a class="uk-button uk-button-default" href="https://u.is" target="_blank" rel="nofollow">Learn more</a>
-					</p>
+		<div class="uk-container uk-container-small" id="requestVoucher">
+			<div class="uk-text-center uk-padding">
+				<h3 class="small-caps">Open a crypto case for free<br/>and get a cryptocurrency voucher!</h3>
+
+				<img src="img/case2.jpg" class="uk-display-inline-block" /><br/>
+
+				<a class="uk-button uk-button-primary uk-border-rounded" id="claimBonusBtn" href="#">Open a crypto case!</a><br/>
+				<span>available {{ page.vouchers.available }} pcs</span>
+
+				<hr class="uk-divider-icon"/>
+
+				<h4>How it works?</h4>
+				<p>We are happy to sponsor our users.<br/>Every new user is eligible to receive a voucher for Crypton!</p>
+			</div>
+		</div>
+
+		<div class="uk-container uk-container-small" style="display: none;" id="voucherResultWrap">
+			<div class="uk-text-center uk-padding">
+				<h3>Your voucher code</h3>
+				<center>
+					<div class="gradient" id="voucherResult">
+						<input class="uk-input uk-form-width-medium uk-form-large input-stylized" type="text" placeholder="Large" aria-label="Large" value="UTP-TEST"/>
+						<button class="btn-copy">
+							<span uk-icon="icon: copy; ratio: 1.5"></span>
+						</button>
+					</div>
+				</center>
+				
+			</div>
+
+			<div class="uk-container uk-container-small">
+				<div class="uk-text-center uk-padding">
+					<h3 class="small-caps">How do I find out my voucher balance<br/>and activate it?</h3>
+					<p>Just use Utopia messenger for your platform</p>
 				</div>
 			</div>
 		</div>
-		
-		<div class="uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" id="section-projects" style="background-color: #2f2f2f;">
-			<div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-				<div class="uk-container">
-					<h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Related projects</h1>
-					<p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Community projects that may interest you.<br/>Other resources you can find inside Utopia</p>
-					{% include 'parts/main/projects.html' %}
-					<p>You can also visit our <a href="https://mfc.click/utopia_community_tech" target="_blank" rel="nofollow">community development tech channel</a>.</p>
-				</div><br/>
-			</div>
-		</div>
-		
-		<div class="uk-container uk-align-center text-center" id="section-contact">
-			<br/>
-			<h3 id="author">Author</h3>
-			<p>My name is Sagleft. I create projects for Utopia.<br/>You can see my other repositories <a href="https://github.com/Sagleft" target="_blank">on github</a>.<br/>
-				<span>If you liked my project, rate it:</span>
-				<a href="https://github.com/Sagleft/utopia-faucet">
-					<img src="/img/github_star.png"/>
-				</a>
-			</p>
-			<p>Our Russian-language chat on the Utopia network:<br/>D7F238C7CEFDA237D14E6B67CF6511F5</p><br/>
-		</div>
-		
-		<hr class="uk-divider-icon"/>
-		
+
+		<canvas class="confetti" id="canvas"></canvas>
+
 		{% include 'parts/footer.html' %}
 	</body>
 </html>

@@ -22,3 +22,72 @@
 .btn-element:hover {
 	background-color: #aeffae;
 }
+
+.uk-section-secondary {
+	background: #fff;
+}
+
+.small-caps {
+	font-variant: all-small-caps;
+}
+
+.confetti {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+	user-select: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -5;
+}
+
+#voucherResult {
+	width: fit-content;
+	background-color: #3a3b3c;
+	padding: 1rem;
+	color: white;
+	font-size: 2rem;
+	border-radius: 10px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btn-copy {
+	border: 0;
+	border-radius: 5px;
+	background: #3a3b3c;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	position: relative;
+	top: 4px;
+	left: 4px;
+}
+
+.input-stylized {
+	background: #3a3b3c;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+}
+
+.gradient {
+    background: linear-gradient(#FF3155 0%, #FF3155 25%, #FFAF42 25%, #FFAF42 50%, #FFED5E 50%, #FFED5E 75%, #2DAEFD 75%);
+	background-position: 100px 100vh;
+	background-repeat: repeat-y;
+	background-position: 0px 0px;
+	animation: gradient 15s infinite linear;
+}
+
+@keyframes gradient {
+
+	to {
+
+		background-position: 0 1000px;
+
+	}
+
+}
