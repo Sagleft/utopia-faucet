@@ -8,7 +8,7 @@ function IsJsonString(str) {
 }
 
 $( document ).ready(function() {
-    new ClipboardJS('.btn');
+    new ClipboardJS('.btn-copy');
 });
 
 $("#claimBonusBtn").click(function() {
