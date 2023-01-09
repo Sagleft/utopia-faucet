@@ -18,6 +18,10 @@
 		public function setUser($user): void {
 			$this->user = &$user;
 		}
+
+		public function getLastError(): string {
+			return $this->last_error;
+		}
 		
 		public function printAPIError($info = '') {
 			exit(json_encode([
@@ -94,5 +98,14 @@
 				return 0;
 			}
 			return $result['vouchersCount'];
+		}
+
+		public function importVouchers($vouchersPath = ''): bool {
+			if($vouchersPath == '') {
+				$this->last_error = 'vouchers path is not set';
+				return false;
+			}
+
+			return true;
 		}
 	}
