@@ -1,5 +1,7 @@
 # Utopia Crypton Faucet
 
+![logo](controller/public_html/img/screen.png)
+
 An example of creating a crane for distributing Cryptons
 
 ## Requirements
