@@ -4,6 +4,6 @@
     $vouchersPath = __DIR__ . '/vouchers.csv';
 
     $handler = new \App\Controller\Handler();
-    if(! $handler->importVouchers($vouchersPath)) {
+    if(! $handler->logic->importVouchers($vouchersPath)) {
         print($handler->getLastError());
     }

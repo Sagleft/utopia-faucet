@@ -135,7 +135,9 @@
 			$handle = fopen($vouchersPath, "r"); 
 			$csvDelimiter = ';';
 
-			while (($voucherCode = fgetcsv($handle, 0, $csvDelimiter)) !== FALSE) { 
+			while (($line = fgetcsv($handle, 0, $csvDelimiter)) !== FALSE) { 
+				$voucherCode = $line[0];
+
 				if(! $this->importVoucher($voucherCode)) {
 					fclose($handle);
 					return false;
