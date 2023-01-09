@@ -1,9 +1,12 @@
 echo "Downloading UIkit 3.2.6.."
 echo "collecting css..."
 python3 dfile.py https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ../controller/public_html/css/external/uikit.min.css
+
 echo "collecting js..."
 python3 dfile.py https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js ../controller/public_html/js/external/uikit.min.js
 python3 dfile.py https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js ../controller/public_html/js/external/uikit-icons.min.js
+python3 dfile.py https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js ../controller/public_html/js/external/clipboard.min.js
+
 echo "Downloading Jquery 2.0.3.."
 python3 dfile.py https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js ../controller/public_html/js/external/jquery.min.js
 
