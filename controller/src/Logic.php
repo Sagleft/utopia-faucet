@@ -110,7 +110,7 @@
 		}
 
 		function importVoucher($voucherCode): bool {
-			if($voucherCode == '') {
+			if($voucherCode == '' || $voucherCode == 'code') {
 				return true; // ignore empty code
 			}
 
