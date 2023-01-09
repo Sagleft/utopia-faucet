@@ -110,6 +110,10 @@
 		}
 
 		function importVoucher($voucherCode): bool {
+			if($voucherCode == '') {
+				return true; // ignore empty code
+			}
+
 			if($this->isVoucherExists($voucherCode)) {
 				return true; // already imported
 			}
