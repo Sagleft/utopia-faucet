@@ -29,8 +29,20 @@ sh get_depends.sh
 ```
 
 * Import table dump from `vouchers.sql`.
-* Next, make changes to .env
+* Next, **make changes to `.env`**
 * `public_html` directory: ``` controller\public_html ```.
+
+## How to import vouchers
+
+place voucher codes to `tools/vouchers.csv`,
+
+open dir `tools`, execute
+
+```php
+php import_vouchers.php
+```
+
+done!
 
 ## Copyright
 
