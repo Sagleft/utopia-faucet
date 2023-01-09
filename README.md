@@ -47,7 +47,3 @@ done!
 ## Copyright
 
 Copyright (c) 2020 Sagleft.
-
----
-
-![image](https://github.com/Sagleft/Sagleft/raw/master/image.png)
