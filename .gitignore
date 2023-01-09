@@ -14,3 +14,4 @@
 /controller/public_html/js/external
 # other
 /logs/**
+tools/vouchers.csv

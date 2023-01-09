@@ -62,7 +62,16 @@
 			$sql_query = "SELECT id FROM vouchers WHERE by_IP='" . $by_IP . "' OR by_UA='" . $by_UA . "' AND used_date >= CURDATE()";
 			return $this->db->checkRowExists($sql_query);
 		}
-		
+
+		function isVoucherExists($voucherCode): bool {
+			$sql_query = "SELECT id FROM vouchers WHERE code='" . $voucherCode . "'";
+			$result = $this->db->query2arr($sql_query);
+			if(\count($result) == 0) {
+				return false;
+			}
+			return true;
+		}
+
 		public function claimCryptonBonus(): string {
 			$by_UA = $this->getUserAgentHash();
 			$by_IP = $this->getUserIPHash();
@@ -100,11 +109,35 @@
 			return $result['vouchersCount'];
 		}
 
-		public function importVouchers($vouchersPath = ''): bool {
+		function importVoucher($voucherCode): bool {
+			if($this->isVoucherExists($voucherCode)) {
+				return true; // already imported
+			}
+
+			$sql_query = "INSERT INTO vouchers SET code='" . $voucherCode . "'";
+			if(! $this->db->tryQuery($sql_query)) {
+				$this->last_error = 'failed to save voucher: ' . $voucherCode;
+				return false;
+			}
+			return true;
+		}
+
+		public function importVouchers($vouchersPath): bool {
 			if($vouchersPath == '') {
 				$this->last_error = 'vouchers path is not set';
 				return false;
 			}
+
+			$handle = fopen($vouchersPath, "r"); 
+			$csvDelimiter = ';';
+
+			while (($voucherCode = fgetcsv($handle, 0, $csvDelimiter)) !== FALSE) { 
+				if(! $this->importVoucher($voucherCode)) {
+					fclose($handle);
+					return false;
+				}
+			}
+			fclose($handle);
 
 			return true;
 		}
