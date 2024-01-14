@@ -3,18 +3,30 @@
 	{% include 'parts/head.html' %}
 	<body>
 		<div class="uk-container uk-container-small" id="requestVoucher">
-			<div class="uk-text-center uk-padding">
-				<h3 class="small-caps">Open a crypto case for free<br/>and get a cryptocurrency voucher!</h3>
+			<div class="uk-text-center uk-padding-small">
+				<h4 class="small-caps">
+					<b>
+						<span class="lead-span">Hello!</span>
+						<span>Here you can receive a Utopia voucher once a day!</span>
+					</b>
+				</h4>
+				<p>A voucher is a code that you can activate in the Utopia messenger to <b>receive cryptocurrency in your account.</b></p>
+				<p>To receive your voucher, simply click on the button below.</p>
 
 				<img src="img/case2.jpg" class="uk-display-inline-block" /><br/>
 
 				<a class="uk-button uk-button-primary uk-border-rounded" id="claimBonusBtn" href="#">Open a crypto case!</a><br/>
-				<span>available {{ page.vouchers.available }} pcs</span>
+				<span id="available-span">available {{ page.vouchers.available }} pcs</span>
 
 				<hr class="uk-divider-icon"/>
 
-				<h4>How it works?</h4>
-				<p>We are happy to sponsor our users.<br/>Every new user is eligible to receive a voucher for Crypton!</p>
+				<h4>What can I do<br/>with the coins I receive?</h4>
+				<p>These are the coins that are used<br/>in the Utopia Ecosystem:</p>
+				<ul class="uk-text-left uk-list-divider">
+					<li>You can buy domain names in WEB3.0</li>
+					<li>Can be spent at <a href="https://u.is/en/merchants.html" target="_blank">any store that accepts Crypton</a>: education, online shopping, hosting, vpn, etc.</li>
+					<li>Trade on the <a href="https://crp.is" target="_blank">Crypton Exchange.</a></li>
+				</ul>
 			</div>
 		</div>
 
@@ -45,11 +57,17 @@
 			<div class="uk-container uk-container-small">
 				<div class="uk-text-center uk-padding">
 					<h3 class="small-caps">How do I find out my voucher balance<br/>and activate it?</h3>
-					<p>Just use Utopia messenger for your platform</p>
+					<p>Just use Utopia messenger<br/>for your platform</p>
+
+					<a href="https://play.google.com/store/apps/details?id=is.u.utopia" class="uk-button uk-button-default uk-padding-small btn-icon">
+						<img src="https://img.icons8.com/ios-filled/50/android-os.png"/>
+					</a>
 
 					<a href="https://update.u.is/downloads/linux/utopia-latest.amd64.deb" class="uk-button uk-button-default uk-padding-small btn-icon">
 						<img src="https://img.icons8.com/ios-filled/50/null/linux.png"/>
 					</a>
+
+					<br/>
 
 					<a href="https://update.u.is/downloads/windows/latest/UtopiaX64.exe" class="uk-button uk-button-default uk-padding-small btn-icon">
 						<img src="https://img.icons8.com/ios-filled/50/null/windows-10.png"/>
@@ -59,9 +77,17 @@
 						<img src="https://img.icons8.com/ios-filled/50/null/mac-os.png"/>
 					</a>
 
+					<div id="mobile-app-intro">
+						<p>Try the <a href="https://play.google.com/store/apps/details?id=is.u.utopia" target="_blank">Utopia app on Android!</a> The <b>built-in AI assistant</b> will help you resolve any issue at any time.</p>
+					</div>
+
 				</div>
 			</div>
 		</div>
+
+		<footer>
+			<p>Icons by <a href="https://icons8.com/icons/ios-filled" target="_blank">Icons8</a></p>
+		</footer>
 
 		<canvas class="confetti" id="canvas"></canvas>
 
