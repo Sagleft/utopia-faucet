@@ -46,7 +46,7 @@ done!
 
 ## Copyright
 
-Copyright (c) 2020 Sagleft.
+Copyright (c) 2024 Sagleft.
 
 
 ---
