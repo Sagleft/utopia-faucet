@@ -38,7 +38,7 @@
 				'error'  => ''
 			]));
 		}
-		
+
 		function getUserIP(): string {
 			if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 				$ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -49,17 +49,17 @@
 			}
 			return $ip;
 		}
-		
+
 		function getUserAgentHash(): string {
 			return hash('sha256', $_SERVER['HTTP_USER_AGENT']);
 		}
-		
+
 		function getUserIPHash() {
 			return hash('sha256', $this->getUserIP());
 		}
-		
+
 		function checkUserCanGetBonus($by_UA = '', $by_IP = ''): bool {
-			$sql_query = "SELECT id FROM vouchers WHERE by_IP='" . $by_IP . "' OR by_UA='" . $by_UA . "' AND used_date >= CURDATE()";
+			$sql_query = "SELECT id FROM vouchers WHERE by_IP='" . $by_IP . "' AND by_UA='" . $by_UA . "' AND used_date >= CURDATE()";
 			return $this->db->checkRowExists($sql_query);
 		}
 
