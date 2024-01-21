@@ -58,6 +58,17 @@ body {
 	z-index: -5;
 }
 
+.text-block {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background-color: white;
+	border-radius: 15px;
+	z-index: 20;
+	margin-top: 15px;
+}
+
 #voucherResult {
 	width: fit-content;
 	background-color: #3a3b3c;
@@ -71,17 +82,6 @@ body {
 
 #voucherResultWrap {
 	padding-bottom: 100px;
-}
-
-#mobile-app-intro {
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 5px;
-	background-color: white;
-	border-radius: 15px;
-	z-index: 20;
-	margin-top: 15px;
 }
 
 .btn-copy {
