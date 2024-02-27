@@ -79,8 +79,8 @@
 				$this->last_error = 'It looks like you already received a voucher for the last day';
 				return '';
 			}
-			
-			$sql_query = "SELECT id,code FROM vouchers WHERE used='0'";
+
+			$sql_query = "SELECT id,code FROM vouchers WHERE used='0' ORDER BY id DESC";
 			$result = $this->db->query2arr($sql_query);
 
 			if(\count($result) == 0) {
